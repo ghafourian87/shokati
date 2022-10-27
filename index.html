@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shokati, Web Designen</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+    <style>
+
+        
+:root {
+    font-size: 24px;
+}
+
+body {
+    background: #1488cc;
+    /* fallback for old browsers */
+    background: linear-gradient(to left, #283593, #1976d2);
+    height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Background circles start */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(#006db3, #29b6f6);
+}
+
+.circles {
+    position: absolute;
+    height: 270px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-1 {
+    height: 180px;
+    width: 180px;
+    top: -50px;
+    left: -60px;
+}
+
+.circle-2 {
+    height: 200px;
+    width: 200px;
+    bottom: -90px;
+    right: -90px;
+    opacity: 0.8;
+}
+
+/* Background circles end */
+
+.card-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
+    height: 270px;
+    width: 450px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.logo img,
+.number,
+.name,
+.born,
+.brem em,
+.pro1 h2,
+.chip a,
+.to,
+.ring {
+    position: absolute;
+    /* All items inside card should have absolute position */
+}
+
+.number,
+.name,
+.pro1 h2,
+.brem em,
+.born,
+.tit,
+.to {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+.number {
+    left: 40px;
+    bottom: 65px;
+    font-family: "Nunito", sans-serif;
+}
+
+.name{
+    font-size: 0.7rem;
+    left: 40px;
+    bottom: 35px;
+}
+
+.pro1 h2{
+    font-size: 0.8rem;
+    left: 40px;
+    top: 20px;
+    font-weight: bold;
+    
+}
+
+.brem em{
+    font-size: 0.8rem;
+    left: 60px;
+    top: 55px;
+    
+}
+
+.born {
+    font-size: 0.6rem;
+    bottom: 35px;
+    right: 110px;
+}
+
+.to {
+    font-size: 0.6rem;
+    bottom: 35px;
+    right: 40px;
+}
+.tit h1{
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    opacity:0.7;
+}
+
+/* The two rings on the card background */
+.ring {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: transparent;
+    border: 50px solid rgba(255, 255, 255, 0.1);
+    bottom: -250px;
+    right: -250px;
+    box-sizing: border-box;
+}
+
+.ring::after {
+    content: "";
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background: transparent;
+    border: 30px solid rgba(255, 255, 255, 0.1);
+    bottom: -80px;
+    right: -110px;
+    box-sizing: border-box;
+}
+@media (max-width: 768px){
+    .tit {  color: rgba(255, 255, 255, 0.8);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+
+}
+}
+
+@media (max-width: 768px){
+    .card {   position: relative;
+    height: 216px;
+    width: 360px; 
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+}
+.number,
+.name,
+.to {font-size: 15px;}
+.born{display: none;}
+
+}
+
+@media (min-width: 1000px){
+    .tit { color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    text-align: center;
+
+}
+}
+@media (max-width: 768px){
+    .chip{display: none;}
+
+}
+
+@media (max-height: 530px){
+    .circle  {
+  display: none;
+}
+.tit{display: none;}
+
+}
+    </style>
+</head>
+<body>
+    <div class="tit mt-3">
+
+        <h1>Frontend Developer in Bremen </h1>
+    
+    </div>
+
+    <div class="circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+    
+    <div class="card-group">
+        <div class="card">
+        
+            <div class="number">+49 178 968 1030</div>
+            <div class="name"><i>Shokati, Mohammad</i></div>
+            <div class="pro1"><h2><em>HTML5, CSS3 & JS </em></h2> </div>
+            <div class="brem"><h2> <em>Bremen, Germany</em></h2> </div>
+            <div class="born"><i>Born on: </i></div>
+            <div class="to">09/1986</div>
+            <div class="ring"></div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
