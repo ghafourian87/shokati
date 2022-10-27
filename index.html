@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shokati, Web Designen</title>
+    <title>Shokati, Web Design</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
 
     <style>
@@ -122,7 +122,7 @@ body {
 
 .brem em{
     font-size: 0.8rem;
-    left: 60px;
+    left: 40px;
     top: 55px;
     
 }
@@ -188,16 +188,25 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-
 }
-.number,
+.number{ font-size: 1em}
+
 .name,
 .to {font-size: 15px;}
+
 .born{display: none;}
+
+.tit h1 { font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.brem em {
+    margin-top: 10px;
+}
 
 }
 
-@media (min-width: 1000px){
+@media (min-width: 768px){
     .tit { color: rgba(255, 255, 255, 0.8);
     font-weight: 400;
     letter-spacing: 2px;
@@ -205,25 +214,44 @@ body {
     text-align: center;
 
 }
+.number{
+    font-size: 0.1rem;
 }
-@media (max-width: 768px){
-    .chip{display: none;}
 
 }
+    
+
+
 
 @media (max-height: 530px){
     .circle  {
   display: none;
 }
 .tit{display: none;}
+.brem em {
+    margin-top: 20px;
+}
+.number{
+    font-size: 0.8rem;
+}
+
+}
+@media (min-height: 530px){
+
+.brem em {
+    margin-top: 20px;
+}
+.number{
+    font-size: 0.8rem;
+}
 
 }
     </style>
 </head>
-<body>
-    <div class="tit mt-3">
+<body class="container-fluid">
+    <div class="tit mt-3 col-sm-12 m-auto ">
 
-        <h1>Frontend Developer in Bremen </h1>
+        <h1 class="md-col-6">Frontend Developer in Bremen </h1>
     
     </div>
 
@@ -237,13 +265,15 @@ body {
         
             <div class="number">+49 178 968 1030</div>
             <div class="name"><i>Shokati, Mohammad</i></div>
-            <div class="pro1"><h2><em>HTML5, CSS3 & JS </em></h2> </div>
-            <div class="brem"><h2> <em>Bremen, Germany</em></h2> </div>
+            <div class="pro1 "><h2><em>HTML5, CSS3 & JS </em></h2> </div>
+            <div class="brem"><h2> <em class="mt-1" >Bremen, Germany</em></h2> </div>
             <div class="born"><i>Born on: </i></div>
             <div class="to">09/1986</div>
             <div class="ring"></div>
         </div>
     </div>
+  
+
     
 
 
